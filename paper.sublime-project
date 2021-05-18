@@ -1,0 +1,28 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.cls",
+				"*.md",
+				"*.gitignore",
+				"*.sublime-project"
+
+			],
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"TEXroot": "paper.tex",
+		"ensure_newline_at_eof_on_save": true,
+		"spell_check": true,
+		"trim_trailing_white_space_on_save": true,
+		"word_wrap": true,
+		"wrap_width": 100,
+		"aux_directory": "cache",
+		"output_directory": "cache"
+	}
+}
+

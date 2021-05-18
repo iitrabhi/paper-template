@@ -1,0 +1,55 @@
+%--------------------------------------------------------------------------------------------------
+%% Packages
+%--------------------------------------------------------------------------------------------------
+	\usepackage{authblk}
+
+	\usepackage{graphicx}
+	\usepackage{lmodern}
+
+	\usepackage{lineno,amstext,amssymb,bm}
+	\usepackage{mathtools} % For underbrace
+	\usepackage[dvipsnames]{xcolor} % To set text color
+	\definecolor{light-gray}{gray}{0.95}
+
+	\usepackage{amsthm}
+
+	\theoremstyle{remark}
+	\newtheorem*{remark}{Remark}
+
+	\usepackage{enumitem}
+	\usepackage{lipsum}
+
+	\usepackage{booktabs}
+	\usepackage{tabu}
+	\providecommand{\keywords}[1]{\textbf{{Keywords:}} #1}
+
+	\setlength {\marginparwidth }{2cm}
+%--------------------------------------------------------------------------------------------------
+%% Custom Commands
+%--------------------------------------------------------------------------------------------------
+	\newcommand{\disp}{\boldsymbol{u}}
+	\newcommand{\dmg}{\theta}
+	\newcommand{\xvec}{\boldsymbol{x}}
+	\newcommand{\dd}[1]{\mathrm{d}#1}
+	\newcommand{\straint}{\boldsymbol{\epsilon}}
+	\newcommand{\stresst}{\boldsymbol{\sigma}}
+%--------------------------------------------------------------------------------------------------
+%% bibliography styles
+%--------------------------------------------------------------------------------------------------
+	\usepackage{float}
+	\usepackage{natbib}
+	\usepackage[bookmarks=true,colorlinks=true,linkcolor=blue,citecolor=red,backref=page]{hyperref}
+	\pdfstringdefDisableCommands{\let\uppercase\relax}
+	\bibliographystyle{abbrvnat}
+
+	\makeatletter
+	\AtBeginDocument{\def\@citecolor{red}}
+	\makeatother
+
+	%\biboptions{sort&compress}
+	%----------------------------------------------------------------------------------------------
+	\makeatletter
+	%\def\cl@chapter{\cl@chapter \@elt {theorem}}%bug in class
+	\def\cl@chapter{\@elt {theorem}}
+	\makeatother %https://tex.stackexchange.com/questions/108394/tex-capacity-exceeded-sorry-input-stacksize-5000
+	\usepackage[nameinlink,capitalize]{cleveref}

@@ -17,4 +17,5 @@ Download Perl form [here.](https://strawberryperl.com/)
 
 ---
 
-To have a clean build, build with script using the key combination: `ctrl+alt+b`
+To have a clean build, build with script using the key combination: `ctrl+shift+b`
+

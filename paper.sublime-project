@@ -7,7 +7,6 @@
 				"*.cls",
 				"*.md",
 				"*.gitignore",
-				"*.sublime-project"
 
 			],
 			"path": "."
@@ -21,8 +20,8 @@
 		"trim_trailing_white_space_on_save": true,
 		"word_wrap": true,
 		"wrap_width": 100,
-		"aux_directory": "cache",
-		"output_directory": "cache"
+		"aux_directory": "build",
+		"output_directory": "build"
 	}
 }
 

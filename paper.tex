@@ -1,14 +1,92 @@
-\documentclass[11pt,a4paper, oneside]{article}
+\documentclass[10pt,a4paper, oneside]{article}
 \usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
-\input{sections/0.0.front_matter/packages}
+% Packages --------------------------------------------------------------------------------------
+	\usepackage{authblk}
+	\usepackage{graphicx}
+	\usepackage{lmodern}
+	\usepackage{lineno,amstext,amssymb,bm}
+	\usepackage{mathtools} % For underbrace
+	\usepackage[dvipsnames]{xcolor} % To set text color
+	\definecolor{light-gray}{gray}{0.95}
 
+	\usepackage{amsthm}
+
+	\theoremstyle{remark}
+	\newtheorem*{remark}{Remark}
+
+	\usepackage{enumitem}
+	\usepackage{lipsum}
+
+	\usepackage{booktabs}
+	\usepackage{tabu}
+	\providecommand{\keywords}[1]{\textbf{{Keywords:}} #1}
+
+	\setlength {\marginparwidth }{2cm}
+	%---------------------------------------------------------------------------------------------
+	%% Custom Commands
+	%---------------------------------------------------------------------------------------------
+	\newcommand{\disp}{\boldsymbol{u}}
+	\newcommand{\dmg}{\theta}
+	\newcommand{\xvec}{\boldsymbol{x}}
+	\newcommand{\dd}[1]{\mathrm{d}#1}
+	\newcommand{\straint}{\boldsymbol{\epsilon}}
+	\newcommand{\stresst}{\boldsymbol{\sigma}}
+	%---------------------------------------------------------------------------------------------
+	%% bibliography styles
+	%---------------------------------------------------------------------------------------------
+	\usepackage{float}
+	\usepackage{natbib}
+	\usepackage[bookmarks=true,colorlinks=true,linkcolor=blue,citecolor=red,backref=page]{hyperref}
+	\pdfstringdefDisableCommands{\let\uppercase\relax}
+	\bibliographystyle{abbrvnat}
+
+	\makeatletter
+	\AtBeginDocument{\def\@citecolor{red}}
+	\makeatother
+
+	%\biboptions{sort&compress}
+	%----------------------------------------------------------------------------------------------
+
+	\usepackage[nameinlink,capitalize]{cleveref}
 \begin{document}
-    \input{sections/0.0.front_matter/0.0.front_matter}
-    \input{sections/1.0.introduction/1.0.introduction}
-    \input{sections/2.0.formulation/2.0.formulation}
-    \input{sections/3.0.numerical_approximation/3.0.numerical_approximation}
-    \input{sections/4.0.results/4.0.results}
-    \input{sections/5.0.conclusion/5.0.conclusion}
-    \input{sections/6.0.appendix/appendix-a}
-    \input{sections/9.0.references/9.0.references}
+% Front Matter ----------------------------------------------------------------------------------
+	\title{This is the title of our paper}
+	\author[1]{Abhinav Gupta}
+	\author[1]{Rajib Chowdhury}
+	\author[1]{Anupam Chakrabarti}
+	\affil[1]{Department of Civil Engineering, Indian Institute of Technology Roorkee, India}
+
+	\thispagestyle{empty}
+	\newpage
+
+	\maketitle
+	\setcounter{page}{1}
+
+	\begin{abstract}
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	\end{abstract}
+	\keywords{Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5}
+% Introduction ----------------------------------------------------------------------------------
+	\section{Introduction}
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry \citet{gupta55lineCodeLargescale2020}. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries \citep{guptaAutoadaptiveSubsteppingAlgorithm2020a,mandalLengthScaleInsensitive2020a}, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry \cref{sec:formulation}. Lorem Ipsum  has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum \cref{sec:conclusion}.
+% Formulation -----------------------------------------------------------------------------------
+	\section{Variational formulations}
+	\label{sec:formulation}
+
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+% Conclusion ------------------------------------------------------------------------------------
+	\section{Conclusion}
+	\label{sec:conclusion}
+
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+% Appendix --------------------------------------------------------------------------------------
+	\appendix
+	\section{Some additional stuff}\label{sec:appenix_a}
+
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+% References ------------------------------------------------------------------------------------
+	% \section*{References}
+    \bibliography{bibliography}
 \end{document}

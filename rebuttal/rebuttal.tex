@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+% Packages ------------------------------------------------------------------
+	\usepackage[utf8]{inputenc}
+	\usepackage{fullpage}
+	% package needed for optional arguments
+	\usepackage{xifthen}
+	% define counters for reviewers and their points
+	\newcounter{reviewer}
+	\setcounter{reviewer}{0}
+	\newcounter{point}[reviewer]
+	\setcounter{point}{0}
+
+	% This refines the format of how the reviewer/point reference will appear.
+	\renewcommand{\thepoint}{\,\thereviewer.\arabic{point}}
+
+	% command declarations for reviewer points and our responses
+	\newcommand{\reviewersection}{\stepcounter{reviewer} \bigskip \hrule
+	                  \section*{Reviewer \thereviewer}}
+
+
+	\newenvironment{point}
+	   {\refstepcounter{point} \bigskip \noindent \emph{\textbf{Reviewer~Point~\thepoint} } ---\ \itshape}
+	   {\par }
+
+	\newenvironment{reply}
+	   {\medskip \noindent
+	   	\textbf{Reply}:\  }
+	   {\medskip }
+\begin{document}
+\section*{Response to the reviewers}
+	% General intro text goes here
+	We thank the reviewers for their critical assessment of our work.
+	In the following we address their concerns point by point.
+
+	Please note that reviewers' comments are in italics while our
+	answers are using normal fonts.
+
+% Let's start point-by-point with Reviewer 1 --------------------------
+	\reviewersection
+
+	The authors thank the reviewer for the valuable comments and suggestions; and we agree almost 100\% with that.
+	\subsection*{General comments}
+	\emph{
+	Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+	}
+
+	\subsection*{Issues}
+	\begin{point}
+	 	\textbf{[Point heading]} It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+	\end{point}
+
+	\begin{reply}
+		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+	\end{reply}
+
+	\subsection*{Minor Issues}
+
+	\begin{point}
+	 	\textbf{[Point heading]} If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+	\end{point}
+
+	\begin{reply}
+		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+	\end{reply}
+
+
+% Begin a new reviewer section ----------------------------------------
+
+	\reviewersection
+	The authors thanks the reviewer for spending valuable time to read the manuscript. In the following, we attempt to respond in view of our work.
+
+	\begin{point}
+	 	\textbf{[Point heading]} All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+	\end{point}
+
+	\begin{reply}
+		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+	\end{reply}
+
+
+\end{document}
+
+
+

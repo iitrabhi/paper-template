@@ -1,0 +1,27 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.cls",
+				"*.md",
+				"*.gitignore",
+
+			],
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"TEXroot": "rebuttal.tex",
+		"ensure_newline_at_eof_on_save": true,
+		"spell_check": true,
+		"trim_trailing_white_space_on_save": true,
+		"word_wrap": true,
+		"wrap_width": 80,
+		"aux_directory": "build",
+		"output_directory": "build"
+	}
+}
+
